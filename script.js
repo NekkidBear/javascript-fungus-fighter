@@ -22,13 +22,20 @@ let attackPoints = 100;
 /**
  * This function is triggered when the Arcane Scepter attack button is clicked. It passes the values for the attack cost and damage to the update function
  */
+/**
+ * This function is triggered when the Arcane Scepter attack button is clicked. It passes the values for the attack cost and damage to the update function
+ */
 function arcaneScepter(event) {
   let attackCost = 12;
   let damage = 14;
   //  console.log("Arcane Scepter!"); // confirms which button event was triggered
   updateGameState(attackCost, damage);
+  updateGameState(attackCost, damage);
 }
 
+/**
+ * This function is triggered when the Entangle attack button is clicked. It passes the values for the attack cost and damage to the update function
+ */
 /**
  * This function is triggered when the Entangle attack button is clicked. It passes the values for the attack cost and damage to the update function
  */
@@ -37,8 +44,12 @@ function entangle(event) {
   let damage = 9;
   //   console.log("Entangle!"); // confirms which button event was triggered
   updateGameState(attackCost, damage);
+  updateGameState(attackCost, damage);
 }
 
+/**
+ * This function is triggered when the Dragon Blade attack button is clicked. It passes the values for the attack cost and damage to the update function
+ */
 /**
  * This function is triggered when the Dragon Blade attack button is clicked. It passes the values for the attack cost and damage to the update function
  */
@@ -47,7 +58,12 @@ function dragonBlade(event) {
   let damage = 47;
   //   console.log("Dragon Blade!"); // confirms which button event was triggered
   updateGameState(attackCost, damage);
+  updateGameState(attackCost, damage);
 }
+
+/**
+ * This function is triggered when the Star Fire attack button is clicked. It passes the values for the attack cost and damage to the update function
+ */
 
 /**
  * This function is triggered when the Star Fire attack button is clicked. It passes the values for the attack cost and damage to the update function
@@ -56,6 +72,7 @@ function starFire(event) {
   let attackCost = 33;
   let damage = 25;
   //   console.log("Star Fire!"); // confirms which button event was triggered
+  updateGameState(attackCost, damage);
   updateGameState(attackCost, damage);
 }
 
