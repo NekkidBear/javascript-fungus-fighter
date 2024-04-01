@@ -3,40 +3,51 @@
 // Example:
 // let fungusHP = 100;
 
+//Declare State variables
 let fungusHP = 100;
 let attackPoints = 100;
 // function onReady() {
 //     console.log("Ready to go!")
 
-    // Make sure you check the index.html file!
-    // There are lots of buttons and things ready for you to hook into here!
-    // 🧠 Remember
-    // Handle events that -> 
-    // Updates state which is ->
-    // - Rendered to the DOM
+// Make sure you check the index.html file!
+// There are lots of buttons and things ready for you to hook into here!
+// 🧠 Remember
+// Handle events that ->
+// Updates state which is ->
+// - Rendered to the DOM
 // }
 
 // onReady()
 
 function arcaneScepter(event) {
-  // AP cost = 12
-  // HP damage = 14
-  console.log("Arcane Scepter!");
+  let attackCost = 12;
+  let damage = 14;
+  //  console.log("Arcane Scepter!"); // confirms which button event was triggered
+  calculateHPandAP(attackCost, damage);
 }
 
 function entangle(event) {
-  // AP cost = 23
-  // HP damage = 9
-  console.log("Entangle!");
+  let attackCost = 23;
+  let damage = 9;
+  //   console.log("Entangle!"); // confirms which button event was triggered
+  calculateHPandAP(attackCost, damage);
 }
 
 function dragonBlade(event) {
-  // AP cost = 38
-  // HP damage = 47
-  console.log("Dragon Blade!");
+  let attackCost = 38;
+  let damage = 47;
+  //   console.log("Dragon Blade!"); // confirms which button event was triggered
+  calculateHPandAP(attackCost, damage);
 }
 function starFire(event) {
-  // AP cost = 33
-  // HP damage = 25
-  console.log("Star Fire!");
+  let attackCost = 33;
+  let damage = 25;
+  //   console.log("Star Fire!"); // confirms which button event was triggered
+  calculateHPandAP(attackCost, damage);
+}
+
+function calculateHPandAP(ap, hp) {
+  // TO DO: decrement scores
+  console.log("Damage Report!");
+  console.log(ap, hp);
 }
