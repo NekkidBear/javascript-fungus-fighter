@@ -85,10 +85,10 @@ function updateGameState(ac, damage) {
   fungusHP -= damage;
 
   //identify DOM elements to update
-  let attacksDiv = document.getElementById("attacks")
-  let fungusAnimation = document.getElementByID("freaky-fungus walk")
+  let attacksDiv = document.getElementById("attacks");
+  let fungusAnimation = document.getElementByID("freaky-fungus walk");
 
-
+    // attack points are 0
   if (attackPoints<0){
     attackPoints=0;
     attacksDiv.classList.add("disabled");
@@ -98,6 +98,7 @@ function updateGameState(ac, damage) {
   if (fungusHP<0){
     fungusHP = 0;
     // fungus is dead; you win!
+    // TO DO: update DOM for Fungus Died
   }
 
   console.log("attack points:", attackPoints);
