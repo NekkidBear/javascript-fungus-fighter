@@ -29,8 +29,8 @@ function arcaneScepter(event) {
   let attackCost = 12;
   let damage = 14;
   //  console.log("Arcane Scepter!"); // confirms which button event was triggered
-  updateGameState(attackCost, damage);
-  updateGameState(attackCost, damage);
+  updateGameStateAndRender(attackCost, damage);
+  updateGameStateAndRender(attackCost, damage);
 }
 
 /**
@@ -43,8 +43,8 @@ function entangle(event) {
   let attackCost = 23;
   let damage = 9;
   //   console.log("Entangle!"); // confirms which button event was triggered
-  updateGameState(attackCost, damage);
-  updateGameState(attackCost, damage);
+  updateGameStateAndRender(attackCost, damage);
+  updateGameStateAndRender(attackCost, damage);
 }
 
 /**
@@ -57,8 +57,8 @@ function dragonBlade(event) {
   let attackCost = 38;
   let damage = 47;
   //   console.log("Dragon Blade!"); // confirms which button event was triggered
-  updateGameState(attackCost, damage);
-  updateGameState(attackCost, damage);
+  updateGameStateAndRender(attackCost, damage);
+  updateGameStateAndRender(attackCost, damage);
 }
 
 /**
@@ -72,11 +72,11 @@ function starFire(event) {
   let attackCost = 33;
   let damage = 25;
   //   console.log("Star Fire!"); // confirms which button event was triggered
-  updateGameState(attackCost, damage);
-  updateGameState(attackCost, damage);
+  updateGameStateAndRender(attackCost, damage);
+  updateGameStateAndRender(attackCost, damage);
 }
 
-function updateGameState(ac, damage) { 
+function updateGameStateAndRender(ac, damage) { 
   // console.log("Damage Report!");
   // console.log(ap, hp);
 
@@ -86,7 +86,15 @@ function updateGameState(ac, damage) {
 
   //identify DOM elements to update
   let attacksDiv = document.getElementById("attacks");
-  let fungusAnimation = document.getElementByID("freaky-fungus walk");
+  let fungusAnimation = document.getElementById("freaky-fungus walk");
+  let fungusHPText = document.getElementById("hp-text");
+  let attackCostText = document.getElementById("ap-text");
+
+//   attackCostText.innerText = `${attackPoints} AP`;
+//   fungusHPText.innerText = `${fungusHP} HP`;
+
+    console.log(attackCostText);
+    console.log(fungusHPText);
 
     // attack points are 0
   if (attackPoints<0){
