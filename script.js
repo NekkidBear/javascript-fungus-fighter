@@ -73,31 +73,30 @@ function updateGameStateAndRender(ap, damage) {
   let fungusHPText = document.getElementById("hp-text");
   let attacktPointsText = document.getElementById("ap-text");
 
-
   //    update the text above the HP and AP bars
-  //   attackCostText.innerText = `${attackPoints} AP`;
-  //   fungusHPText.innerText = `${fungusHP} HP`;
-// console logs to confirm correct DOM Object is selected
-  console.log("attack Points:", attacktPointsText);
-  console.log("fungus HP:", fungusHPText);
+    // attacktPointsText.textContent = `${attackPoints} AP`; // update AP
+    // fungusHPText.textContent = `${fungusHP} HP`; //update HP
+
+  // console logs to confirm correct DOM Object is selected
+  console.log("attack Points:", attacktPointsText.textContent);
+  console.log("fungus HP:", fungusHPText.textContent);
   console.log("attackButtons:", attackButtonsDiv);
   console.log("fungus animation:", fungusAnimation);
-
 
   // attack points are 0
   if (attackPoints < 0) {
     attackPoints = 0;
-    attackButtonsDiv.classList.add("disabled");
-    fungusAnimation.classList.add("jump");
+    attackButtonsDiv.classList.add("disabled"); // Disable the attacks
+    fungusAnimation.classList.add("jump"); // Fungus Jumps
     fungusAnimation.classList.remove("walk");
-    console.log("You Lose!");
+    console.log("You Lose!"); 
   }
 
   // fungus HP is 0
   if (fungusHP < 0) {
     fungusHP = 0;
     // fungus is dead; you win!
-    fungusAnimation.classList.add("dead");
+    fungusAnimation.classList.add("dead"); 
     fungusAnimation.classList.remove("walk");
   }
 
