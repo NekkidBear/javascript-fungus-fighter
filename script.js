@@ -73,12 +73,15 @@ function updateGameStateAndRender(ap, damage) {
   let fungusHPText = document.getElementById("hp-text");
   let attackCostText = document.getElementById("ap-text");
 
+
   //    update the text above the HP and AP bars
   //   attackCostText.innerText = `${attackPoints} AP`;
   //   fungusHPText.innerText = `${fungusHP} HP`;
 // console logs to confirm correct DOM Object is selected
   console.log(attackCostText);
   console.log(fungusHPText);
+  console.log(attacksDiv);
+
 
   // attack points are 0
   if (attackPoints < 0) {
@@ -95,6 +98,8 @@ function updateGameStateAndRender(ap, damage) {
   if (fungusHP < 0) {
     fungusHP = 0;
     // fungus is dead; you win!
+    fungusAnimation.classList.add("dead");
+    fungusAnimation.classList.remove("walk");
     // TO DO: update DOM for Fungus Died
   }
 
