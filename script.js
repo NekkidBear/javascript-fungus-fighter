@@ -68,7 +68,7 @@ function updateGameStateAndRender(ap, damage) {
   fungusHP -= damage;
 
   //identify DOM elements to update
-  let attackButtonsDiv = document.querySelector(".attacks");
+  let attackButtons = document.querySelector(".attack-btn");
   let fungusAnimation = document.querySelector(".freaky-fungus");
   let fungusHPText = document.querySelector(".hp-text");
   let attacktPointsText = document.querySelector(".ap-text");
@@ -77,16 +77,18 @@ function updateGameStateAndRender(ap, damage) {
     attacktPointsText.textContent = `${attackPoints} AP`; // update AP
     fungusHPText.textContent = `${fungusHP} HP`; //update HP
 
+  // update the progress bars
+
   // console logs to confirm correct DOM Object is selected
   console.log("attack Points:", attacktPointsText.textContent);
   console.log("fungus HP:", fungusHPText.textContent);
-  console.log("attackButtons:", attackButtonsDiv);
+  console.log("attackButtons:", attackButtons);
   console.log("fungus animation:", fungusAnimation);
 
 // attack points are 0
   if (attackPoints < 0) {
     attackPoints = 0;
-    attackButtonsDiv.classList.add("disabled"); // Disable the attacks
+    attackButtons.classList.add("disabled"); // Disable the attacks
     fungusAnimation.classList.add("jump"); // Fungus Jumps
     fungusAnimation.classList.remove("walk");
     console.log("You Lose!"); 
