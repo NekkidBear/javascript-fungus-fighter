@@ -74,8 +74,8 @@ function updateGameStateAndRender(ap, damage) {
   let attacktPointsText = document.querySelector(".ap-text");
 
   //    update the text above the HP and AP bars
-    // attacktPointsText.textContent = `${attackPoints} AP`; // update AP
-    // fungusHPText.textContent = `${fungusHP} HP`; //update HP
+    attacktPointsText.textContent = `${attackPoints} AP`; // update AP
+    fungusHPText.textContent = `${fungusHP} HP`; //update HP
 
   // console logs to confirm correct DOM Object is selected
   console.log("attack Points:", attacktPointsText.textContent);
