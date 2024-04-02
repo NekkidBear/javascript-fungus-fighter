@@ -61,7 +61,7 @@ function starFire(event) {
 
 function updateGameStateAndRender(ap, damage) {
   // console.log("Damage Report!");
-  console.log("Attack points: ", ap, "Damage", damage);
+  console.log("Attack cost: ", ap, "Damage", damage);
 
   //update state variables
   attackPoints -= ap;
@@ -84,24 +84,24 @@ function updateGameStateAndRender(ap, damage) {
   console.log("fungus animation:", fungusAnimation);
 
 // attack points are 0
-//   if (attackPoints < 0) {
-//     attackPoints = 0;
-//     attackButtonsDiv.classList.add("disabled"); // Disable the attacks
-//     fungusAnimation.classList.add("jump"); // Fungus Jumps
-//     fungusAnimation.classList.remove("walk");
-//     console.log("You Lose!"); 
-//   }
+  if (attackPoints < 0) {
+    attackPoints = 0;
+    attackButtonsDiv.classList.add("disabled"); // Disable the attacks
+    fungusAnimation.classList.add("jump"); // Fungus Jumps
+    fungusAnimation.classList.remove("walk");
+    console.log("You Lose!"); 
+  }
 
 // fungus HP is 0
-//   if (fungusHP < 0) {
-//     fungusHP = 0;
-// fungus is dead; you win!
-//     fungusAnimation.classList.add("dead"); 
-//     fungusAnimation.classList.remove("walk");
-//   }
+  if (fungusHP < 0) {
+    fungusHP = 0;
+fungus is dead; you win!
+    fungusAnimation.classList.add("dead"); 
+    fungusAnimation.classList.remove("walk");
+  }
 
   //console.log current states of variables and fungus animation
-  console.log("attack points:", attackPoints);
-  console.log("fungusHP:", fungusHP);
+  console.log("attack points state:", attackPoints);
+  console.log("fungusHP state:", fungusHP);
   console.log("fungus animation:", fungusAnimation);
 }
