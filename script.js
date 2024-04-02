@@ -95,7 +95,7 @@ function updateGameStateAndRender(ap, damage) {
 // fungus HP is 0
   if (fungusHP < 0) {
     fungusHP = 0;
-fungus is dead; you win!
+//fungus is dead; you win!
     fungusAnimation.classList.add("dead"); 
     fungusAnimation.classList.remove("walk");
   }
