@@ -59,12 +59,12 @@ function starFire(event) {
   updateGameStateAndRender(attackCost, damage);
 }
 
-function updateGameStateAndRender(ac, damage) {
+function updateGameStateAndRender(ap, damage) {
   // console.log("Damage Report!");
-  console.log("Attack points: ", ap, "Fungus HP", hp);
+  console.log("Attack points: ", ap, "Damage", damage);
 
   //update state variables
-  attackPoints -= ac;
+  attackPoints -= ap;
   fungusHP -= damage;
 
   //identify DOM elements to update
