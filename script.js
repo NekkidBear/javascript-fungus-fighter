@@ -88,10 +88,8 @@ function updateGameStateAndRender(ap, damage) {
   if (attackPoints < 0) {
     attackPoints = 0;
     attackButtonsDiv.classList.add("disabled");
-    fungusAnimation.classList.replace(
-      "freaky-fungus walk",
-      "freaky-fungus jump"
-    );
+    fungusAnimation.classList.add("jump");
+    fungusAnimation.classList.remove("walk");
     console.log("You Lose!");
   }
 
