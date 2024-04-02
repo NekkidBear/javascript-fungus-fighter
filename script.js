@@ -88,10 +88,8 @@ function updateGameStateAndRender(ap, damage) {
   if (attackPoints < 0) {
     attackPoints = 0;
     attackButtonsDiv.classList.add("disabled");
-    fungusAnimation.classList.replace(
-      "freaky-fungus walk",
-      "freaky-fungus jump"
-    );
+    fungusAnimation.classList.add("jump");
+    fungusAnimation.classList.remove("walk");
     console.log("You Lose!");
   }
 
@@ -99,9 +97,8 @@ function updateGameStateAndRender(ap, damage) {
   if (fungusHP < 0) {
     fungusHP = 0;
     // fungus is dead; you win!
-    // fungusAnimation.classList.add("dead");
-    // fungusAnimation.classList.remove("walk");
-    // TO DO: update DOM for Fungus Died
+    fungusAnimation.classList.add("dead");
+    fungusAnimation.classList.remove("walk");
   }
 
   //console.log current states of variables and fungus animation
