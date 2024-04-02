@@ -68,7 +68,7 @@ function updateGameStateAndRender(ap, damage) {
   fungusHP -= damage;
 
   //identify DOM elements to update
-  let attackButtons = document.querySelector(".attack-btn");
+  let attackButtons = document.getElementsByClassName(".attack-btn");
   let fungusAnimation = document.querySelector(".freaky-fungus");
   let fungusHPText = document.querySelector(".hp-text");
   let attacktPointsText = document.querySelector(".ap-text");
