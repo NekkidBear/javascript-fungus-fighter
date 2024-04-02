@@ -68,25 +68,26 @@ function updateGameStateAndRender(ap, damage) {
   fungusHP -= damage;
 
   //identify DOM elements to update
-  let attacksDiv = document.getElementById("attack-buttons");
+  let attackButtonsDiv = document.getElementById("attack-buttons");
   let fungusAnimation = document.getElementById("freaky-fungus walk");
   let fungusHPText = document.getElementById("hp-text");
-  let attackCostText = document.getElementById("ap-text");
+  let attacktPointsText = document.getElementById("ap-text");
 
 
   //    update the text above the HP and AP bars
   //   attackCostText.innerText = `${attackPoints} AP`;
   //   fungusHPText.innerText = `${fungusHP} HP`;
 // console logs to confirm correct DOM Object is selected
-  console.log(attackCostText);
-  console.log(fungusHPText);
-  console.log(attacksDiv);
+  console.log("attack Points:", attacktPointsText);
+  console.log("fungus HP:", fungusHPText);
+  console.log("attackButtons:", attackButtonsDiv);
+  console.log("fungus animation:", fungusAnimation);
 
 
   // attack points are 0
   if (attackPoints < 0) {
     attackPoints = 0;
-    attacksDiv.classList.add("disabled");
+    attackButtonsDiv.classList.add("disabled");
     fungusAnimation.classList.replace(
       "freaky-fungus walk",
       "freaky-fungus jump"
@@ -98,8 +99,8 @@ function updateGameStateAndRender(ap, damage) {
   if (fungusHP < 0) {
     fungusHP = 0;
     // fungus is dead; you win!
-    fungusAnimation.classList.add("dead");
-    fungusAnimation.classList.remove("walk");
+    // fungusAnimation.classList.add("dead");
+    // fungusAnimation.classList.remove("walk");
     // TO DO: update DOM for Fungus Died
   }
 
