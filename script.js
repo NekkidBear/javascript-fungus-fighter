@@ -19,14 +19,13 @@ let attackPoints = 100;
 
 // onReady()
 
-
 /**
  * This function is triggered when the Arcane Scepter attack button is clicked. It passes the values for the attack cost and damage to the update function
  */
 function arcaneScepter(event) {
   let attackCost = 12;
   let damage = 14;
-  //  console.log("Arcane Scepter!"); // confirms which button event was triggered
+  console.log("Arcane Scepter!"); // confirms which button event was triggered
   updateGameStateAndRender(attackCost, damage);
 }
 
@@ -36,7 +35,7 @@ function arcaneScepter(event) {
 function entangle(event) {
   let attackCost = 23;
   let damage = 9;
-  //   console.log("Entangle!"); // confirms which button event was triggered
+  console.log("Entangle!"); // confirms which button event was triggered
   updateGameStateAndRender(attackCost, damage);
 }
 
@@ -46,7 +45,7 @@ function entangle(event) {
 function dragonBlade(event) {
   let attackCost = 38;
   let damage = 47;
-  //   console.log("Dragon Blade!"); // confirms which button event was triggered
+  console.log("Dragon Blade!"); // confirms which button event was triggered
   updateGameStateAndRender(attackCost, damage);
 }
 
@@ -56,11 +55,11 @@ function dragonBlade(event) {
 function starFire(event) {
   let attackCost = 33;
   let damage = 25;
-  //   console.log("Star Fire!"); // confirms which button event was triggered
+  console.log("Star Fire!"); // confirms which button event was triggered
   updateGameStateAndRender(attackCost, damage);
 }
 
-function updateGameStateAndRender(ac, damage) { 
+function updateGameStateAndRender(ac, damage) {
   // console.log("Damage Report!");
   // console.log(ap, hp);
 
@@ -74,20 +73,23 @@ function updateGameStateAndRender(ac, damage) {
   let fungusHPText = document.getElementById("hp-text");
   let attackCostText = document.getElementById("ap-text");
 
-//   attackCostText.innerText = `${attackPoints} AP`;
-//   fungusHPText.innerText = `${fungusHP} HP`;
+  //   attackCostText.innerText = `${attackPoints} AP`;
+  //   fungusHPText.innerText = `${fungusHP} HP`;
 
-    console.log(attackCostText);
-    console.log(fungusHPText);
+  console.log(attackCostText);
+  console.log(fungusHPText);
 
-    // attack points are 0
-  if (attackPoints<0){
-    attackPoints=0;
+  // attack points are 0
+  if (attackPoints < 0) {
+    attackPoints = 0;
     attacksDiv.classList.add("disabled");
-    fungusAnimation.classList.replace("freaky-fungus walk","freaky-fungus jump")
-    console.log("You Lose!")
+    fungusAnimation.classList.replace(
+      "freaky-fungus walk",
+      "freaky-fungus jump"
+    );
+    console.log("You Lose!");
   }
-  if (fungusHP<0){
+  if (fungusHP < 0) {
     fungusHP = 0;
     // fungus is dead; you win!
     // TO DO: update DOM for Fungus Died
