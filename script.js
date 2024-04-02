@@ -95,5 +95,5 @@ function updateGameStateAndRender(ac, damage) {
 
   console.log("attack points:", attackPoints);
   console.log("fungusHP:", fungusHP);
-  console.log("fungus animation");
+  console.log("fungus animation:", fungusAnimation);
 }
