@@ -63,7 +63,7 @@ function updateGameStateAndRender(ap, damage) {
   // console.log("Damage Report!");
   console.log("Attack cost: ", ap, "Damage", damage);
 
-  //update state variables
+  //update global variables
   attackPoints -= ap;
   fungusHP -= damage;
 

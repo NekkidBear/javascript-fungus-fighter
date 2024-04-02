@@ -6,4 +6,4 @@ TODO:
         d. updateHPBarState()
         e. render functions()
     2. Fix ap/HP calculations because they are still decrementing after hitting 0.
-    3. EndGame
+    3. EndGame functions
